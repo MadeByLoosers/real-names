@@ -1,0 +1,115 @@
+@import 'html5bp';
+
+html, body, #container {
+	height: 100%;
+}
+
+body {
+	background: url('../img/body-bg.jpg') repeat scroll 0 0;
+}
+
+p {
+	font-family: 'Radley', serif;
+	color: #9acc96;
+	font-size: 20px;
+	font-style: italic;
+}
+
+#container {
+	width: 724px;
+	margin: 0 auto;
+	background: url('../img/content-bg.png') repeat-y scroll 0 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+#logo {
+	width: 551px;
+	height: 354px;
+	background: url('../img/logo.png') no-repeat scroll 0 0;
+	display: block;
+	margin: 0 auto 60px;
+
+	h1 {
+		margin: 0;
+
+		span {
+			display: none;
+		}
+	}
+}
+
+#intro, #how-about {
+	width: 500px;
+	margin: 0 auto;
+}
+
+#intro {
+	margin-bottom: 50px;
+}
+
+#how-about {
+	text-align: center;
+	margin: 0 auto 42px;
+}
+
+#suggestions {
+	position: relative;
+	margin: 0 32px 42px;
+	float: left;
+	padding-left: 0;
+	width: 660px;
+
+	p {
+		font-family: 'Mr Bedfort', cursive;
+		font-size: 60px;
+		font-weight: bold;
+	}
+
+	.sname {
+		font-family: 'Mr Bedfort', cursive;
+		width: 320px;
+		float: left;
+		text-align: center;
+		padding-top: 52px;
+		padding-bottom: 42px;
+		margin: 0 auto;
+
+		span {
+			padding-top: 42px;
+			padding-bottom: 40px;
+
+		}
+	}
+
+	.boys-name {
+		color: #88caf0;
+		background: url('../img/boy-divider.png') no-repeat scroll 50% 0;
+	}
+
+	.or {
+		position: absolute;
+		top: 28px;
+		left: 310px;
+		font-size: 34px;
+		color: #9acc96;
+	}
+
+	.girls-name {
+		color: #cc9ac6;
+		background: url('../img/girl-divider.png') no-repeat scroll 50% 0;
+	}
+}
+
+#more-names {
+	background: url('../img/more-names.png') no-repeat scroll 0 0;
+	width: 136px;
+	height: 82px;
+	display: block;
+	text-indent: -99999px;
+	margin: 0 auto;
+	clear: both;
+	outline: 0;
+}
+
+@import 'html5bp-after';

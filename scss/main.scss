@@ -1,6 +1,7 @@
 @import 'html5bp';
 
-html, body, #container {
+html,
+body {
 	height: 100%;
 }
 
@@ -11,64 +12,82 @@ body {
 p {
 	font-family: 'Radley', serif;
 	color: #9acc96;
-	font-size: 20px;
+	font-size: 18px;
 	font-style: italic;
 }
 
 #container {
-	width: 724px;
+	width:80%;
+	max-width: 1000px;
 	margin: 0 auto;
-	background: url('../img/content-bg.png') repeat-y scroll 0 0;
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-
-#logo {
-	width: 551px;
-	height: 354px;
-	background: url('../img/logo.png') no-repeat scroll 0 0;
-	display: block;
-	margin: 0 auto 60px;
-
-	h1 {
-		margin: 0;
-
-		span {
-			display: none;
-		}
+	background:#fff;
+	box-shadow: 0 0 5px 5px rgba(33, 33, 33, 0.2);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@media screen and (max-width:480px) {
+		width:90%;
 	}
 }
 
-#intro, #how-about {
-	width: 500px;
+#logo {
+	margin:0 auto;
+	text-align:center;
+
+	img {
+		max-width:90%;
+		height:auto;
+		margin-bottom:20px;
+	}
+}
+
+#intro,
+#how-about {
+	max-width: 80%;
 	margin: 0 auto;
+	padding:0 20px;
+	text-align:center;
 }
 
 #intro {
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 }
 
 #how-about {
 	text-align: center;
-	margin: 0 auto 42px;
+	margin: 0 auto 25px;
 }
 
 #suggestions {
 	position: relative;
-	margin: 0 32px 42px;
-	float: left;
-	padding-left: 0;
-	width: 660px;
+	width:640px;
+	margin: 0 auto 25px;
+	text-align:center;
+
+	@media screen and (max-width:800px) {
+		width:300px;
+	}
 
 	p {
 		font-family: 'Mr Bedfort', cursive;
 		font-size: 60px;
+		-webkit-transition: font-size 0.2s;
+		-moz-transition: font-size 0.2s;
+		transition: font-size 0.2s;
+
+		@media screen and (max-width:800px) {
+			font-size:24px;
+		}
 		font-weight: bold;
 	}
 
 	.sname {
 		font-family: 'Mr Bedfort', cursive;
 		width: 320px;
+//		-webkit-transition: width 0.2s;
+		@media screen and (max-width:800px) {
+			width:150px;
+		}
+
 		float: left;
 		text-align: center;
 		padding-top: 52px;
@@ -78,19 +97,27 @@ p {
 		span {
 			padding-top: 42px;
 			padding-bottom: 40px;
-
 		}
 	}
 
 	.boys-name {
 		color: #88caf0;
 		background: url('../img/boy-divider.png') no-repeat scroll 50% 0;
+		@media screen and (max-width:800px) {
+			background-image: url('../img/boy-divider-small.png');
+		}
 	}
 
 	.or {
 		position: absolute;
 		top: 28px;
 		left: 310px;
+//		-webkit-transition: left,top 0.2s;
+		@media screen and (max-width:800px) {
+			left:140px;
+			top:35px;
+			font-size:18px;
+		}
 		font-size: 34px;
 		color: #9acc96;
 	}
@@ -98,6 +125,9 @@ p {
 	.girls-name {
 		color: #cc9ac6;
 		background: url('../img/girl-divider.png') no-repeat scroll 50% 0;
+		@media screen and (max-width:800px) {
+			background-image: url('../img/girl-divider-small.png');
+		}
 	}
 }
 
@@ -110,6 +140,14 @@ p {
 	margin: 0 auto;
 	clear: both;
 	outline: 0;
+	-webkit-transition: background-color 0.25s;
+	-moz-transition: background-color 0.25s;
+	transition: background-color 0.25s;
+}
+
+#more-names:hover {
+	background-color:rgba(200,200,200,0.1);
+	border-radius:15px;
 }
 
 @import 'html5bp-after';

@@ -23,7 +23,7 @@ RN = (function () {
 
 		$('#more-names').on('click', function (e) {
 			e.preventDefault();
-
+			_gaq.push(['_trackPageview', '/more-names']);
 			loadNames();
 		});
 
@@ -41,8 +41,12 @@ RN = (function () {
 			bHTML = suggestions.find('.boys-name span'),
 			gHTML = suggestions.find('.girls-name span');
 
-		bHTML.html(s.boys[bRand]);
-		gHTML.html(s.girls[gRand]);
+		bHTML.fadeOut(250, function(){
+			bHTML.html(s.boys[bRand]).fadeIn();
+		});
+		gHTML.fadeOut(250, function(){
+			gHTML.html(s.girls[gRand]).fadeIn();
+		});
 
 		s.bInd = bRand;
 		s.gInd = gRand;
@@ -58,7 +62,7 @@ RN = (function () {
 		else {
 			return getRandomName(nameArray, currentInd);
 		}
-		
+
 	}
 
 	return {

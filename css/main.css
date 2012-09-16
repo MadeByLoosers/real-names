@@ -176,6 +176,7 @@ p {
 
 #container {
   width: 80%;
+  min-height: 100%;
   max-width: 1000px;
   margin: 0 auto;
   background: #fff;

@@ -215,7 +215,7 @@ p {
   text-align: center; }
   @media screen and (max-width: 800px) {
     #suggestions {
-      width: 300px; } }
+      width: 286px; } }
   #suggestions p {
     font-family: 'Mr Bedfort', cursive;
     font-size: 60px;
@@ -236,7 +236,7 @@ p {
     margin: 0 auto; }
     @media screen and (max-width: 800px) {
       #suggestions .sname {
-        width: 150px; } }
+        width: 142px; } }
     #suggestions .sname span {
       padding-top: 42px;
       padding-bottom: 40px; }
@@ -256,7 +256,8 @@ p {
       #suggestions .or {
         left: 140px;
         top: 35px;
-        font-size: 18px; } }
+        font-size: 18px;
+        left: 132px; } }
   #suggestions .girls-name {
     color: #cc9ac6;
     background: url("../img/girl-divider.png") no-repeat scroll 50% 0; }
@@ -275,7 +276,8 @@ p {
   outline: 0;
   -webkit-transition: background-color 0.25s;
   -moz-transition: background-color 0.25s;
-  transition: background-color 0.25s; }
+  transition: background-color 0.25s;
+  padding-bottom: 30px; }
 
 #more-names:hover {
   background-color: rgba(200, 200, 200, 0.1);

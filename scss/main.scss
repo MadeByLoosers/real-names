@@ -64,7 +64,9 @@ p {
 	text-align:center;
 
 	@media screen and (max-width:800px) {
-		width:300px;
+		//width:300px;
+		// width: 268px;
+		width: 286px;
 	}
 
 	p {
@@ -85,7 +87,9 @@ p {
 		width: 320px;
 //		-webkit-transition: width 0.2s;
 		@media screen and (max-width:800px) {
-			width:150px;
+			//width:150px;
+			// width: 134px;
+			width: 142px;
 		}
 
 		float: left;
@@ -117,6 +121,7 @@ p {
 			left:140px;
 			top:35px;
 			font-size:18px;
+			left: 132px;
 		}
 		font-size: 34px;
 		color: #9acc96;
@@ -143,6 +148,7 @@ p {
 	-webkit-transition: background-color 0.25s;
 	-moz-transition: background-color 0.25s;
 	transition: background-color 0.25s;
+	padding-bottom: 30px;
 }
 
 #more-names:hover {

@@ -17,8 +17,10 @@ RN = (function () {
 			s.girls = data.girls;
 			s.boys = data.boys;
 
-			loadNames();
+			shuffle(s.girls);
+			shuffle(s.boys);
 
+			loadNames();
 		});
 
 		$('#more-names').on('click', function (e) {
@@ -32,38 +34,41 @@ RN = (function () {
 	function loadNames() {
 		var s = settings;
 
-		// Get random names from settings list
-		var bRand = getRandomName(s.boys, s.bInd);
-			gRand = getRandomName(s.girls, s.gInd);
-
 		// Update HTML
 		var suggestions = $('#suggestions'),
 			bHTML = suggestions.find('.boys-name span'),
 			gHTML = suggestions.find('.girls-name span');
 
 		bHTML.fadeOut(250, function(){
-			bHTML.html(s.boys[bRand]).fadeIn();
+			bHTML.html(s.boys[s.bInd]).fadeIn();
 		});
 		gHTML.fadeOut(250, function(){
-			gHTML.html(s.girls[gRand]).fadeIn();
+			gHTML.html(s.girls[s.gInd]).fadeIn();
 		});
 
-		s.bInd = bRand;
-		s.gInd = gRand;
+		s.bInd = s.bInd === s.boys.length-1 ? 0 : s.bInd+1;
+		s.gInd = s.gInd === s.girls.length-1 ? 0 : s.gInd+1;
 	}
 
-	function getRandomName(nameArray, currentInd) {
-		var s = settings,
-			rnd = Math.floor((Math.random()*nameArray.length-1)+1);
-
-		if (rnd !== currentInd) {
-			return rnd;
-		}
-		else {
-			return getRandomName(nameArray, currentInd);
-		}
-
+	/**
+	 * Shuffles an array in place.
+	 */
+    function shuffle(array) {
+    	var len = array.length;
+	    for ( var i=0; i<len; i++ ) {
+	        var rand = randomInt(0,len-1);
+	        var temp = array[i];
+	        array[i] = array[rand];
+	        array[rand] = temp;
+	    }
 	}
+
+	/**
+	 * Returns a random integer within an arbitrary range.
+	 */
+	function randomInt(min,max) {
+        return Math.floor(Math.random()*(max-min+1))+min;
+    }
 
 	return {
 		init: init

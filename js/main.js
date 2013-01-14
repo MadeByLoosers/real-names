@@ -54,13 +54,13 @@ RN = (function () {
 	 * Shuffles an array in place.
 	 */
     function shuffle(array) {
-    	var len = array.length;
-	    for ( var i=0; i<len; i++ ) {
-	        var rand = randomInt(0,len-1);
-	        var temp = array[i];
-	        array[i] = array[rand];
-	        array[rand] = temp;
-	    }
+			var len = array.length;
+			for ( var i=0; i<len; i++ ) {
+				var rand = randomInt(0,len-1);
+				var temp = array[i];
+				array[i] = array[rand];
+				array[rand] = temp;
+			}
 	}
 
 	/**
@@ -72,7 +72,7 @@ RN = (function () {
 
 	return {
 		init: init
-	}
+	};
 
 })();
 

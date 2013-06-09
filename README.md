@@ -5,3 +5,19 @@ A celebration of traditional names that put the Great into Britain; why call you
 The [campaign for real names](http://campaignforrealnames.com)
 
 Another [Gunt London](http://guntlondon.com) production
+
+##Compiling CSS
+
+To compile the SCSS files you need to install [SASS](http://sass-lang.com/):
+
+```
+gem install sass
+```
+
+Once SASS is installed you can run the following command to manually compile the CSS file:
+
+```
+sass --watch scss/main.scss:css/main.css
+```
+
+Leave this running in a terminal window to watch for changes to any of the SCSS files, and to recompile the CSS automatically when changes are detected.
